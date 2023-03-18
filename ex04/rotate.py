@@ -2,7 +2,6 @@ from load_image import ft_load
 from PIL import Image
 import numpy as np
 
-
 def ft_zoom(image: np.ndarray) -> np.ndarray:
     x1, y1 = 450, 100
     x2, y2 = 850, 500
@@ -11,8 +10,8 @@ def ft_zoom(image: np.ndarray) -> np.ndarray:
     print(zoom)
     return zoom
 
-
 if __name__ == "__main__":
-    pixels = ft_load("animal.jpeg")
-    img = Image.fromarray(ft_zoom(pixels))
-    img.show()
+	img = ft_load("animal.jpeg")
+	img = ft_zoom(img)
+	img = Image.fromarray(img)
+	img.show()
