@@ -43,6 +43,6 @@ Displays and returns an image in blue scale"""
 def ft_grey(array) -> np.ndarray:
     """
 Displays and returns image in grey scale"""
-    tmp = np.dot(array[..., :3], [0.2989, 0.5870, 0.1140])
+    tmp = np.dot(array[:, :, :3], [0.2989, 0.5870, 0.1140])
     Image.fromarray(tmp).show()
     return (tmp)

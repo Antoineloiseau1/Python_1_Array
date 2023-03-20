@@ -7,7 +7,7 @@ def slice_me(family: list, start: int, end: int) -> list:
     """
     try:
         if (type(family) is not list):
-            raise Exception("Family must be of type list")
+            raise Exception("family must be of type list")
         print("My shape is :", np.shape(family))
         sliced = family[start:end]
         print("My new shape is : ", np.shape(sliced))

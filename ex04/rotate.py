@@ -1,6 +1,6 @@
 from load_image import ft_load
-from PIL import Image
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 def ft_zoom(image: np.ndarray) -> np.ndarray:
@@ -23,5 +23,5 @@ if __name__ == "__main__":
     img = np.transpose(img)
     print("New shape after transpose:", np.shape(img))
     print(img)
-    img = Image.fromarray(img)
-    img.show()
+    plt.imshow(img, cmap='gray')
+    plt.show()
