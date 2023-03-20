@@ -15,5 +15,4 @@ def ft_load(path: str) -> np.ndarray:
     pixels = np.array(image)
     image.close()
     print("The shape of image is:",  np.shape(pixels))
-    print(pixels)
     return (pixels)

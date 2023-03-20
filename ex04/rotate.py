@@ -12,9 +12,6 @@ def ft_zoom(image: np.ndarray) -> np.ndarray:
     x2, y2 = 850, 500
     zoom = image[y1:y2, x1:x2, :1]
     print("The shape of the image is:", np.shape(zoom), end="")
-    zoom = image[y1:y2, x1:x2, 0]
-    print(" or", np.shape(zoom))
-    zoom = image[y1:y2, x1:x2, :1]
     print(zoom)
     zoom = image[y1:y2, x1:x2, 0]
     return zoom
