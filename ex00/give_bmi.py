@@ -9,6 +9,8 @@ def give_bmi(height: list[int | float], weight: list[int | float]) \
     h = np.array(height)
     w = np.array(weight)
     try:
+        if (0 in height):
+            raise ZeroDivisionError("Cannot divide by zero")
         lst = list(w / (h**2))
         return lst
     except TypeError as msg:
@@ -16,6 +18,9 @@ def give_bmi(height: list[int | float], weight: list[int | float]) \
         exit(-1)
     except ValueError as msg:
         print("ValueError:", msg)
+        exit(-1)
+    except ZeroDivisionError as msg:
+        print("ZeroDivisionError:", msg)
         exit(-1)
 
 
